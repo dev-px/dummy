@@ -1,0 +1,306 @@
+[
+  {
+    "exercise_id": "1",
+    "title": "Deep Breathing",
+    "description": "Breathe in for 4 seconds, hold for 4 seconds, and exhale for 4 seconds. Repeat for 2-5 minutes.",
+    "type": "breathing",
+    "duration": 5,
+    "audio": "deep_breathing.mp3",
+    "instructions": [
+      { "step": 1, "instruction": "Find a comfortable seated position and close your eyes." },
+      { "step": 2, "instruction": "Inhale deeply through your nose for 4 seconds." },
+      { "step": 3, "instruction": "Hold your breath for 4 seconds." },
+      { "step": 4, "instruction": "Exhale slowly through your mouth for 4 seconds." },
+      { "step": 5, "instruction": "Repeat the cycle for 2-5 minutes, focusing on your breath." }
+    ]
+  },
+  {
+    "exercise_id": "2",
+    "title": "Body Scan Meditation",
+    "description": "Close your eyes and bring attention to different parts of your body, from head to toe.",
+    "type": "meditation",
+    "duration": 10,
+    "audio": "body_scan.mp3",
+    "instructions": [
+      { "step": 1, "instruction": "Lie down or sit in a comfortable position and close your eyes." },
+      { "step": 2, "instruction": "Bring your attention to your toes. Notice any sensations without judgment." },
+      { "step": 3, "instruction": "Slowly move your attention upward to your feet, ankles, and legs." },
+      { "step": 4, "instruction": "Continue scanning each part of your body, acknowledging any tension or relaxation." },
+      { "step": 5, "instruction": "Finish at the top of your head, taking deep breaths and relaxing completely." }
+    ]
+  },
+  {
+    "exercise_id": "3",
+    "title": "5-4-3-2-1 Grounding",
+    "description": "Identify 5 things you see, 4 you touch, 3 you hear, 2 you smell, and 1 you taste to stay present.",
+    "type": "grounding",
+    "duration": 7,
+    "audio": "grounding_exercise.mp3",
+    "instructions": [
+      { "step": 1, "instruction": "Take a deep breath and observe your surroundings." },
+      { "step": 2, "instruction": "Name 5 things you can see around you." },
+      { "step": 3, "instruction": "Identify 4 things you can physically feel (clothing, ground, etc.)." },
+      { "step": 4, "instruction": "Listen and recognize 3 sounds you can hear." },
+      { "step": 5, "instruction": "Notice 2 different scents around you." },
+      { "step": 6, "instruction": "Focus on 1 taste in your mouth or take a sip of a drink." }
+    ]
+  },
+  {
+    "exercise_id": "4",
+    "title": "Mindful Walking",
+    "description": "Walk slowly, feeling each step and noticing your surroundings without distractions.",
+    "type": "movement",
+    "duration": 8,
+    "audio": "mindful_walking.mp3",
+    "instructions": [
+      { "step": 1, "instruction": "Start walking at a slow, comfortable pace." },
+      { "step": 2, "instruction": "Pay attention to each step—how your feet touch the ground." },
+      { "step": 3, "instruction": "Notice your breathing as you walk, inhaling and exhaling naturally." },
+      { "step": 4, "instruction": "Observe your surroundings without judgment, simply noticing what is around you." },
+      { "step": 5, "instruction": "Continue walking mindfully for the duration of the exercise." }
+    ]
+  },
+  {
+    "exercise_id": "5",
+    "title": "Gratitude Journaling",
+    "description": "Write down three things you are grateful for each day and reflect on them.",
+    "type": "journaling",
+    "duration": 5,
+    "audio": null,
+    "instructions": [
+      { "step": 1, "instruction": "Find a quiet place and take a few deep breaths to center yourself." },
+      { "step": 2, "instruction": "Take a journal or a piece of paper and a pen." },
+      { "step": 3, "instruction": "Write down three things you are grateful for today." },
+      { "step": 4, "instruction": "Reflect on why these things bring you joy or comfort." },
+      { "step": 5, "instruction": "Read your list out loud or in your mind to reinforce positive feelings." }
+    ]
+  },
+  {
+    "exercise_id": "6",
+    "title": "Loving-Kindness Meditation",
+    "description": "Think of yourself and others, repeating phrases like 'May you be happy, may you be healthy.'",
+    "type": "meditation",
+    "duration": 10,
+    "audio": "loving_kindness.mp3",
+    "instructions": [
+      { "step": 1, "instruction": "Sit comfortably and close your eyes." },
+      { "step": 2, "instruction": "Take deep breaths and bring someone you love into your mind." },
+      { "step": 3, "instruction": "Silently repeat: 'May you be happy, may you be healthy, may you be at peace.'" },
+      { "step": 4, "instruction": "Extend this wish to yourself, then to a neutral person, then to someone difficult." },
+      { "step": 5, "instruction": "End the meditation by resting in gratitude and peace." }
+    ]
+  },
+  {
+    "exercise_id": "7",
+    "title": "Box Breathing",
+    "description": "Inhale for 4 seconds, hold for 4 seconds, exhale for 4 seconds, hold again. Repeat.",
+    "type": "breathing",
+    "duration": 5,
+    "audio": "box_breathing.mp3",
+    "instructions": [
+      { "step": 1, "instruction": "Sit upright and relax your shoulders." },
+      { "step": 2, "instruction": "Inhale deeply through your nose for 4 seconds." },
+      { "step": 3, "instruction": "Hold your breath for 4 seconds." },
+      { "step": 4, "instruction": "Exhale slowly through your mouth for 4 seconds." },
+      { "step": 5, "instruction": "Hold your breath again for 4 seconds before repeating the cycle." }
+    ]
+  },
+  {
+    "exercise_id": "8",
+    "title": "Progressive Muscle Relaxation",
+    "description": "Tense each muscle group for a few seconds, then relax, moving from head to toe.",
+    "type": "relaxation",
+    "duration": 10,
+    "audio": "muscle_relaxation.mp3",
+    "instructions": [
+      { "step": 1, "instruction": "Find a quiet place to sit or lie down." },
+      { "step": 2, "instruction": "Tense your toes for 5 seconds, then relax them." },
+      { "step": 3, "instruction": "Move to your legs, tighten the muscles for 5 seconds, then release." },
+      { "step": 4, "instruction": "Continue up your body—stomach, arms, shoulders, and face." },
+      { "step": 5, "instruction": "Finish by taking slow, deep breaths and feeling the relaxation." }
+    ]
+  },
+  {
+    "exercise_id": "9",
+    "title": "Mindful Eating",
+    "description": "Eat slowly, focusing on flavors, textures, and smells. Chew each bite thoroughly.",
+    "type": "awareness",
+    "duration": 5,
+    "audio": null,
+    "instructions": [
+      { "step": 1, "instruction": "Choose a small piece of food, like a raisin or a piece of chocolate." },
+      { "step": 2, "instruction": "Observe it closely—notice its color, texture, and shape." },
+      { "step": 3, "instruction": "Slowly bring it to your mouth, noticing any scent or anticipation." },
+      { "step": 4, "instruction": "Take a small bite and chew slowly, paying attention to taste and texture." },
+      { "step": 5, "instruction": "Swallow mindfully and reflect on the experience." }
+    ]
+  },
+  {
+    "exercise_id": "10",
+    "title": "Visualization",
+    "description": "Close your eyes and imagine a peaceful place, focusing on sights, sounds, and feelings.",
+    "type": "meditation",
+    "duration": 8,
+    "audio": "visualization.mp3",
+    "instructions": [
+      { "step": 1, "instruction": "Find a quiet space and close your eyes." },
+      { "step": 2, "instruction": "Picture a place where you feel completely at peace (a beach, a forest, etc.)." },
+      { "step": 3, "instruction": "Visualize the details—colors, sounds, scents, and the feeling of the air." },
+      { "step": 4, "instruction": "Breathe deeply and allow yourself to feel immersed in this peaceful scene." },
+      { "step": 5, "instruction": "Stay in this visualization for a few minutes before slowly opening your eyes." }
+    ]
+  },
+  {
+    "exercise_id": "11",
+    "title": "Single-Tasking",
+    "description": "Pick one task and do it with full focus—no distractions, no multitasking.",
+    "type": "focus",
+    "duration": 5,
+    "audio": null,
+    "instructions": [
+      { "step": 1, "instruction": "Choose one task to complete (writing, cleaning, reading, etc.)." },
+      { "step": 2, "instruction": "Eliminate distractions—put away your phone and turn off notifications." },
+      { "step": 3, "instruction": "Fully engage in the task, noticing each movement and detail." },
+      { "step": 4, "instruction": "If your mind wanders, gently bring your focus back to the task." },
+      { "step": 5, "instruction": "Complete the task with full awareness and presence." }
+    ]
+  },
+  {
+    "exercise_id": "12",
+    "title": "Silent Sitting",
+    "description": "Sit in silence for 5-10 minutes, letting thoughts come and go without judgment.",
+    "type": "meditation",
+    "duration": 10,
+    "audio": "silent_sitting.mp3",
+    "instructions": [
+      { "step": 1, "instruction": "Find a quiet space and sit comfortably." },
+      { "step": 2, "instruction": "Close your eyes and take a few deep breaths." },
+      { "step": 3, "instruction": "Allow your thoughts to come and go without engaging with them." },
+      { "step": 4, "instruction": "Focus on your breathing or simply observe the silence." },
+      { "step": 5, "instruction": "Continue for the set time, then slowly open your eyes." }
+    ]
+  },
+  {
+    "exercise_id": "13",
+    "title": "Nature Observation",
+    "description": "Spend time outdoors, notice the colors, sounds, and textures in nature.",
+    "type": "awareness",
+    "duration": 7,
+    "audio": null,
+    "instructions": [
+      { "step": 1, "instruction": "Go outside to a park, garden, or any natural setting." },
+      { "step": 2, "instruction": "Observe the environment—notice the trees, flowers, or the sky." },
+      { "step": 3, "instruction": "Listen to the sounds—birds, wind, rustling leaves." },
+      { "step": 4, "instruction": "Touch natural elements—bark, grass, or water, and feel their textures." },
+      { "step": 5, "instruction": "Breathe deeply and take in the fresh air, feeling connected to nature." }
+    ]
+  },
+  {
+    "exercise_id": "14",
+    "title": "Mindful Listening",
+    "description": "Listen carefully to a song, a podcast, or someone's voice with full attention.",
+    "type": "awareness",
+    "duration": 5,
+    "audio": "mindful_listening.mp3",
+    "instructions": [
+      { "step": 1, "instruction": "Find a quiet place and choose a piece of audio (music, nature sounds, or a guided meditation)." },
+      { "step": 2, "instruction": "Close your eyes and focus on the sounds, noticing every instrument or tone." },
+      { "step": 3, "instruction": "If your mind wanders, gently bring your focus back to the sound." },
+      { "step": 4, "instruction": "Listen deeply without forming judgments—just experience the sound." },
+      { "step": 5, "instruction": "After listening, reflect on how you feel and the emotions the sound evoked." }
+    ]
+  },
+  {
+    "exercise_id": "15",
+    "title": "Breath Awareness",
+    "description": "Observe your natural breathing rhythm without trying to change it.",
+    "type": "breathing",
+    "duration": 5,
+    "audio": "breath_awareness.mp3",
+    "instructions": [
+      { "step": 1, "instruction": "Sit comfortably and close your eyes." },
+      { "step": 2, "instruction": "Bring your awareness to your breath, without trying to control it." },
+      { "step": 3, "instruction": "Notice the sensation of air entering and leaving your nostrils." },
+      { "step": 4, "instruction": "Observe how your chest or belly rises and falls with each breath." },
+      { "step": 5, "instruction": "If your mind drifts, gently return your focus to your breathing." }
+    ]
+  },
+  {
+    "exercise_id": "16",
+    "title": "Mindful Stretching",
+    "description": "Perform slow, intentional stretches with deep breathing.",
+    "type": "movement",
+    "duration": 8,
+    "audio": "stretching.mp3",
+    "instructions": [
+      { "step": 1, "instruction": "Find a quiet space and stand or sit comfortably." },
+      { "step": 2, "instruction": "Slowly stretch your arms overhead while taking a deep breath." },
+      { "step": 3, "instruction": "Bend side to side, feeling the stretch in your body." },
+      { "step": 4, "instruction": "Roll your shoulders and gently stretch your neck." },
+      { "step": 5, "instruction": "Move with awareness, focusing on each muscle as you stretch." }
+    ]
+  },
+  {
+    "exercise_id": "17",
+    "title": "Self-Compassion Exercise",
+    "description": "Speak to yourself with kindness as you would to a close friend.",
+    "type": "awareness",
+    "duration": 5,
+    "audio": "self_compassion.mp3",
+    "instructions": [
+      { "step": 1, "instruction": "Find a comfortable and quiet place to sit." },
+      { "step": 2, "instruction": "Think of a moment when you were struggling emotionally." },
+      { "step": 3, "instruction": "Silently or aloud, say kind words to yourself, like 'I am doing my best.'" },
+      { "step": 4, "instruction": "Acknowledge your feelings without judgment and offer yourself support." },
+      { "step": 5, "instruction": "Breathe deeply and let go of self-criticism, embracing self-compassion." }
+    ]
+  },
+  {
+    "exercise_id": "18",
+    "title": "Thought Labeling",
+    "description": "Notice thoughts, label them ('worry,' 'planning'), and let them go.",
+    "type": "awareness",
+    "duration": 6,
+    "audio": "thought_labeling.mp3",
+    "instructions": [
+      { "step": 1, "instruction": "Find a quiet place and sit comfortably with your eyes closed." },
+      { "step": 2, "instruction": "Observe your thoughts as they arise without engaging with them." },
+      { "step": 3, "instruction": "Mentally label each thought—'worry,' 'fear,' 'planning,' 'judgment.'" },
+      { "step": 4, "instruction": "Acknowledge the thought and then gently let it go." },
+      { "step": 5, "instruction": "Continue observing and labeling for the duration of the exercise." }
+    ]
+  },
+  {
+    "exercise_id": "19",
+    "title": "Hand Awareness",
+    "description": "Rub your hands together, feel the warmth, and focus on the sensation.",
+    "type": "awareness",
+    "duration": 5,
+    "audio": "hand_awareness.mp3",
+    "instructions": [
+      { "step": 1, "instruction": "Sit comfortably and close your eyes." },
+      { "step": 2, "instruction": "Rub your hands together quickly to generate warmth." },
+      { "step": 3, "instruction": "Slowly separate your hands and notice the sensation between them." },
+      { "step": 4, "instruction": "Bring your palms close together without touching, feeling the energy." },
+      { "step": 5, "instruction": "Focus on the tingling, warmth, or coolness in your hands." }
+    ]
+  },
+  {
+  "exercise_id": "20",
+  "title": "Senses Focus",
+  "description": "Engage all five senses to ground yourself in the present moment.",
+  "type": "awareness",
+  "duration": 7,
+  "audio": "senses_focus.mp3",
+  "instructions": [
+    { "step": 1, "instruction": "Find a quiet place and sit comfortably." },
+    { "step": 2, "instruction": "Start with sight—observe colors, shapes, and movement around you." },
+    { "step": 3, "instruction": "Move to touch—feel the texture of your clothes, an object, or your skin." },
+    { "step": 4, "instruction": "Listen carefully—identify different sounds near and far." },
+    { "step": 5, "instruction": "Focus on smell—inhale deeply and notice any scents around you." },
+    { "step": 6, "instruction": "Lastly, engage taste—savor a sip of water, tea, or a piece of food mindfully." },
+    { "step": 7, "instruction": "Reflect on how each sense contributes to your experience of the present moment." }
+  ]
+}
+]
+
