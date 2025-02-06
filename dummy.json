@@ -533,3 +533,147 @@ These quotes reflect the importance of mental and emotional health and encourage
     margin-bottom: 20px;
   }
 }
+
+
+<div class="mood-tracker">
+  <!-- Banner Section -->
+  <div class="banner"></div>
+
+  <!-- Current Mood Section -->
+  <div *ngIf="currentMood" class="current-mood-card">
+    <h2>{{ currentMood.mood }}</h2>
+    <p class="date">{{ currentMood.date | date: 'fullDate' }}</p>
+    <p class="description">{{ currentMood.description }}</p>
+  </div>
+
+  <!-- Dropdown for Previous Moods -->
+  <div class="mood-dropdown">
+    <label for="moodMonth">View Past Moods</label>
+    <select id="moodMonth" [(ngModel)]="selectedMonth" (change)="fetchMoods()">
+      <option *ngFor="let month of months" [value]="month">{{ month }}</option>
+    </select>
+  </div>
+
+  <!-- Mood History Section -->
+  <div class="mood-history">
+    <div *ngFor="let mood of moods" class="mood-card">
+      <h3>{{ mood.mood }}</h3>
+      <p class="timestamp">{{ mood.date | date: 'medium' }}</p>
+      <p class="description">{{ mood.description }}</p>
+    </div>
+  </div>
+
+  <!-- Mood Posting Section -->
+  <div class="post-mood">
+    <label for="newMood">How are you feeling today?</label>
+    <input type="text" id="newMood" [(ngModel)]="newMood">
+    <button (click)="postMood()">Post Mood</button>
+  </div>
+</div>
+
+
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-mood-tracker',
+  templateUrl: './mood-tracker.component.html',
+  styleUrls: ['./mood-tracker.component.scss']
+})
+export class MoodTrackerComponent {
+  currentMood = {
+    mood: "Happy 😊",
+    description: "Feeling great after meditation!",
+    date: new Date()
+  };
+
+  moods = [
+    { mood: "Calm", description: "Relaxed day!", date: new Date('2024-01-01') },
+    { mood: "Stressed", description: "Busy with work!", date: new Date('2024-01-05') }
+  ];
+
+  months = ["January", "February", "March"];
+  selectedMonth = "January";
+
+  fetchMoods() {
+    console.log("Fetching moods for:", this.selectedMonth);
+  }
+
+  newMood = "";
+  postMood() {
+    console.log("New mood posted:", this.newMood);
+  }
+}
+
+
+
+    .mood-tracker {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.banner {
+  background: linear-gradient(135deg, #03585F, #D9E5D9);
+  height: 250px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.current-mood-card, .mood-card {
+  background: #D9E5D9;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.current-mood-card h2, .mood-card h3 {
+  color: #03585F;
+  font-weight: bold;
+}
+
+.mood-dropdown {
+  margin-bottom: 20px;
+  label {
+    font-weight: medium;
+    color: #03585F;
+  }
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #D9E5D9;
+    border-radius: 8px;
+  }
+}
+
+.post-mood {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+  label {
+    font-weight: 500;
+    color: #03585F;
+  }
+
+  input {
+    padding: 10px;
+    border: 2px solid #D9E5D9;
+    border-radius: 8px;
+  }
+
+  button {
+    background: #ED9571;
+    color: #FFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+      background: #E07C5C;
+    }
+  }
+}
+
