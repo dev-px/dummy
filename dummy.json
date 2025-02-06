@@ -346,3 +346,190 @@ Here are 10 quotes related to mental and emotional well-being, each with the aut
    *(A motivational quote highlighting resilience and the ability to grow stronger through adversity.)*
 
 These quotes reflect the importance of mental and emotional health and encourage self-awareness, mindfulness, and perseverance. They can inspire individuals on their journey toward healing and well-being.
+
+
+
+
+
+
+<div class="container py-5">
+  <div class="row g-4 justify-content-center">
+    
+    <!-- Mood History Card -->
+    <div class="col-lg-6">
+      <div class="card mood-card">
+        <div class="card-header">
+          <h3 class="card-title">Mood History</h3>
+        </div>
+        <div class="card-body">
+          <p class="text-muted">Track your mood patterns over time and gain insights into your emotional well-being.</p>
+          
+          <!-- Mood History Table (Scrollable) -->
+          <div class="mood-history">
+            <table class="table">
+              <tbody>
+                <tr *ngFor="let mood of moods">
+                  <td class="serial">{{ mood.sno }}</td>
+                  <td class="mood-text">{{ mood.mood }}</td>
+                  <td class="emoji">{{ mood.emoji }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <button class="btn btn-insights">View Insights</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reminder Card -->
+    <div class="col-lg-6">
+      <div class="card reminder-card">
+        <div class="card-header">
+          <h3 class="card-title">Set Daily Reminders</h3>
+        </div>
+        <div class="card-body">
+          <p class="text-muted">Stay consistent with mindfulness by setting personalized reminders.</p>
+
+          <div class="d-flex align-items-center justify-content-between">
+            <span class="text-dark fw-bold">Enable Reminder</span>
+            <input type="checkbox" class="form-check-input" [(ngModel)]="isReminderOn">
+          </div>
+
+          <div *ngIf="isReminderOn" class="mt-3">
+            <label class="form-label">Select Time</label>
+            <input type="time" class="form-control" [(ngModel)]="reminderTime">
+          </div>
+
+          <button class="btn btn-reminder mt-3">Set Reminder</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+  isReminderOn: boolean = false;
+  reminderTime: string = '';
+
+  moods = [
+    { sno: 1, mood: 'Happy', emoji: '😊' },
+    { sno: 2, mood: 'Excited', emoji: '😃' },
+    { sno: 3, mood: 'Calm', emoji: '😌' },
+    { sno: 4, mood: 'Tired', emoji: '😴' },
+    { sno: 5, mood: 'Anxious', emoji: '😟' },
+    { sno: 6, mood: 'Sad', emoji: '😢' },
+    { sno: 7, mood: 'Motivated', emoji: '🚀' },
+  ];
+
+
+/* General Styling */
+.container {
+  max-width: 1100px;
+}
+
+/* Card Styling */
+.card {
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Mood History Card */
+.mood-card {
+  background: #F0F9F4; /* Soft Pastel Green */
+}
+
+.mood-card .card-header {
+  background: #03585F; /* Deep Teal */
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 12px;
+}
+
+.mood-history {
+  max-height: 250px; /* Scrollable section */
+  overflow-y: auto;
+}
+
+.table {
+  width: 100%;
+  text-align: left;
+}
+
+.serial {
+  font-weight: bold;
+  color: #03585F;
+}
+
+.mood-text {
+  color: #202538;
+  font-weight: 500;
+}
+
+.emoji {
+  font-size: 20px;
+}
+
+/* View Insights Button */
+.btn-insights {
+  background: #ED9571; /* Coral Orange */
+  color: white;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  transition: 0.3s;
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.btn-insights:hover {
+  background: #E07C5C; /* Darker coral */
+}
+
+/* Reminder Card */
+.reminder-card {
+  background: #FDF5E6; /* Soft Warm Beige */
+}
+
+.reminder-card .card-header {
+  background: #03585F; /* Deep Teal */
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 12px;
+}
+
+.btn-reminder {
+  background: #ED9571; /* Coral Orange */
+  color: white;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  transition: 0.3s;
+  display: block;
+  width: 100%;
+}
+
+.btn-reminder:hover {
+  background: #E07C5C; /* Darker coral */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .card {
+    margin-bottom: 20px;
+  }
+}
