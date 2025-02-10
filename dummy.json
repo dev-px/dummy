@@ -719,3 +719,50 @@ export class MoodTrackerComponent {
     background: #333;
     margin: 20px;
 }
+
+
+
+
+
+<div class="container-fluid">
+  <div class="d-flex mt-5 p-3">
+    <div class="circle-img">
+      <img src="" alt="" class="img" />
+    </div>
+    <div class="card">
+      <div class="px-3 pt-4 pb-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, quia.
+      </div>
+      <div class="post-time text-end px-3 pb-1 mt-2">10:15 AM</div>
+    </div>
+  </div>
+</div>
+
+
+
+.container-fluid{
+    background-color: bisque;
+    height: 80vh;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+
+
+
+
+
+
+
+.img{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.card{
+    border-top-left-radius: 0%;
+}
