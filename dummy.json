@@ -677,3 +677,45 @@ export class MoodTrackerComponent {
   }
 }
 
+<div class="skeleton">
+  <div class="skeleton__header"></div>
+  <div class="skeleton__content"></div>
+</div>
+
+.skeleton {
+    background: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 20px;
+    width: 300px;
+    height: 400px;
+    position: relative;
+}
+
+.skeleton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: loading 1s infinite;
+}
+
+@keyframes loading {
+    100% {
+        left: 100%;
+    }
+}
+
+.skeleton__header {
+    height: 200px;
+    background: #333;
+}
+
+.skeleton__content {
+    height: 20px;
+    background: #333;
+    margin: 20px;
+}
