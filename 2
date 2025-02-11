@@ -1,0 +1,108 @@
+const mongoose = require('mongoose');
+
+const commentSchema = new mongoose.Schema({
+  content: { type: String, required: true },
+  createdAt: { type: Date, default: Date.now }
+});
+
+const storySchema = new mongoose.Schema({
+  title: { type: String, required: true },
+  content: { type: String, required: true },
+  createdAt: { type: Date, default: Date.now },
+  comments: [commentSchema]
+});
+
+module.exports = mongoose.model('Story', storySchema);
+
+
+
+const express = require('express');
+const router = express.Router();
+const storyService = require('../services/storyService');
+
+// POST /api/stories - Create a new story
+router.post('/', async (req, res) => {
+  try {
+    const { title, content } = req.body;
+    if (!title || !content) {
+      return res.status(400).json({ error: 'Title and content are required' });
+    }
+    const newStory = await storyService.createStory({ title, content });
+    res.status(201).json(newStory);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// GET /api/stories - Get all stories
+router.get('/', async (req, res) => {
+  try {
+    const stories = await storyService.getAllStories();
+    res.json(stories);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// GET /api/stories/:id - Get a single story by ID
+router.get('/:id', async (req, res) => {
+  try {
+    const story = await storyService.getStoryById(req.params.id);
+    if (!story) {
+      return res.status(404).json({ error: 'Story not found' });
+    }
+    res.json(story);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// POST /api/stories/:id/comments - Add a comment to a story
+router.post('/:id/comments', async (req, res) => {
+  try {
+    const { content } = req.body;
+    if (!content) {
+      return res.status(400).json({ error: 'Comment content is required' });
+    }
+    const updatedStory = await storyService.addCommentToStory(req.params.id, { content });
+    res.json(updatedStory);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+module.exports = router;
+
+
+
+const Story = require('../models/story');
+
+const createStory = async (data) => {
+  // data: { title, content }
+  const story = new Story(data);
+  return await story.save();
+};
+
+const getAllStories = async () => {
+  return await Story.find().sort({ createdAt: -1 });
+};
+
+const getStoryById = async (id) => {
+  return await Story.findById(id);
+};
+
+const addCommentToStory = async (storyId, comment) => {
+  const story = await Story.findById(storyId);
+  if (!story) {
+    throw new Error('Story not found');
+  }
+  story.comments.push(comment);
+  return await story.save();
+};
+
+module.exports = {
+  createStory,
+  getAllStories,
+  getStoryById,
+  addCommentToStory,
+};
