@@ -1,35 +1,45 @@
 <!-- community.component.html -->
-<div class="community-container">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Community Support</a>
+  </div>
+</nav>
+
+<div class="container mt-4">
   <!-- Banner -->
-  <div class="banner">
-    <h1>Community Support</h1>
+  <div class="banner text-center p-4 rounded mb-4">
+    <h1 class="text-white">Share Your Story, Find Support</h1>
   </div>
 
   <!-- Post Submission -->
-  <div class="post-form">
-    <textarea [(ngModel)]="newPost.content" placeholder="Share your story..." rows="4"></textarea>
-    <button (click)="submitPost()">Post</button>
+  <div class="card p-4 mb-4">
+    <textarea [(ngModel)]="newPost.content" class="form-control" placeholder="Share your story..." rows="4"></textarea>
+    <button class="btn btn-primary mt-3" (click)="submitPost()">Post</button>
   </div>
 
   <!-- Posts List -->
-  <div class="posts-container">
-    <div *ngFor="let post of posts" class="post-card">
-      <h3>{{ post.title }}</h3>
-      <p>{{ post.content }}</p>
-      <button (click)="openCommentsModal(post)">View Comments</button>
+  <div class="row">
+    <div class="col-md-6 mb-3" *ngFor="let post of posts">
+      <div class="card shadow-sm p-3">
+        <h4>{{ post.title }}</h4>
+        <p>{{ post.content }}</p>
+        <button class="btn btn-outline-primary btn-sm" (click)="openCommentsModal(post)">View Comments</button>
+      </div>
     </div>
   </div>
+</div>
 
-  <!-- Comments Modal -->
-  <div class="modal" *ngIf="selectedPost" (click)="closeModal()">
-    <div class="modal-content" (click)="$event.stopPropagation()">
-      <h2>Comments</h2>
-      <div class="comments-list">
-        <p *ngFor="let comment of selectedPost.comments">{{ comment.content }}</p>
+<!-- Comments Modal -->
+<div class="modal fade show" *ngIf="selectedPost" style="display: block; background: rgba(0, 0, 0, 0.5);" (click)="closeModal()">
+  <div class="modal-dialog" (click)="$event.stopPropagation()">
+    <div class="modal-content p-4">
+      <h4>Comments</h4>
+      <div class="comments-list mb-3">
+        <p *ngFor="let comment of selectedPost.comments" class="border-bottom py-2">{{ comment.content }}</p>
       </div>
-      <textarea [(ngModel)]="newComment" placeholder="Write a comment..."></textarea>
-      <button (click)="addComment()">Comment</button>
-      <button class="close-btn" (click)="closeModal()">Close</button>
+      <textarea [(ngModel)]="newComment" class="form-control" placeholder="Write a comment..."></textarea>
+      <button class="btn btn-success mt-2" (click)="addComment()">Comment</button>
+      <button class="btn btn-secondary mt-2" (click)="closeModal()">Close</button>
     </div>
   </div>
 </div>
@@ -76,92 +86,30 @@ export class CommunityComponent {
 }
 
 /* community.component.css */
-.community-container {
-  font-family: Arial, sans-serif;
-  background-color: #D9E5D9;
-  padding: 20px;
-  text-align: center;
-}
-
 .banner {
   background-color: #03585F;
   color: white;
-  padding: 20px;
-  font-size: 24px;
-  font-weight: bold;
 }
 
-.post-form textarea {
-  width: 100%;
-  padding: 10px;
-  border: 2px solid #03585F;
-  border-radius: 5px;
+.card {
+  border-radius: 10px;
 }
 
-.post-form button {
+.btn-primary {
   background-color: #ED9571;
-  color: white;
-  padding: 10px 15px;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
-.posts-container {
-  margin-top: 20px;
+.btn-outline-primary {
+  color: #03585F;
+  border-color: #03585F;
 }
 
-.post-card {
-  background-color: white;
-  padding: 15px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.post-card button {
-  background-color: #FCC6AE;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 3px;
-}
-
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.btn-success {
+  background-color: #03585F;
 }
 
 .modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 5px;
-  width: 50%;
-}
-
-.modal-content textarea {
+  border-radius: 10px;
   width: 100%;
-  padding: 10px;
-  border: 2px solid #03585F;
-  border-radius: 5px;
-}
-
-.modal-content button {
-  background-color: #03585F;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.close-btn {
-  background-color: #202538;
 }
