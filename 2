@@ -1,3 +1,4 @@
+<!-- community.component.html -->
 <div class="community-container">
   <!-- Banner -->
   <div class="banner">
@@ -32,3 +33,135 @@
     </div>
   </div>
 </div>
+
+<!-- community.component.ts -->
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-community',
+  templateUrl: './community.component.html',
+  styleUrls: ['./community.component.css']
+})
+export class CommunityComponent {
+  posts = [
+    { title: 'Feeling Down', content: 'I have been struggling lately...', comments: [] },
+    { title: 'Need Support', content: 'Anyone else experiencing anxiety?', comments: [] }
+  ];
+  
+  newPost = { content: '' };
+  newComment = '';
+  selectedPost: any = null;
+
+  submitPost() {
+    if (this.newPost.content.trim()) {
+      this.posts.push({ title: 'Anonymous', content: this.newPost.content, comments: [] });
+      this.newPost.content = '';
+    }
+  }
+
+  openCommentsModal(post: any) {
+    this.selectedPost = post;
+  }
+
+  closeModal() {
+    this.selectedPost = null;
+  }
+
+  addComment() {
+    if (this.newComment.trim() && this.selectedPost) {
+      this.selectedPost.comments.push({ content: this.newComment });
+      this.newComment = '';
+    }
+  }
+}
+
+/* community.component.css */
+.community-container {
+  font-family: Arial, sans-serif;
+  background-color: #D9E5D9;
+  padding: 20px;
+  text-align: center;
+}
+
+.banner {
+  background-color: #03585F;
+  color: white;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.post-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #03585F;
+  border-radius: 5px;
+}
+
+.post-form button {
+  background-color: #ED9571;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.posts-container {
+  margin-top: 20px;
+}
+
+.post-card {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-card button {
+  background-color: #FCC6AE;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 50%;
+}
+
+.modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #03585F;
+  border-radius: 5px;
+}
+
+.modal-content button {
+  background-color: #03585F;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-btn {
+  background-color: #202538;
+}
