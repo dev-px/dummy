@@ -1,10 +1,4 @@
-<!-- community.component.html -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="#">Community Support</a>
-  </div>
-</nav>
-
+<!-- Community Posts -->
 <div class="container mt-4">
   <!-- Banner -->
   <div class="banner text-center p-4 rounded mb-4">
@@ -29,8 +23,8 @@
   </div>
 </div>
 
-<!-- Comments Modal -->
-<div class="modal fade show" *ngIf="selectedPost" style="display: block; background: rgba(0, 0, 0, 0.5);" (click)="closeModal()">
+<!-- Comments Modal (Only Show When Needed) -->
+<div *ngIf="selectedPost" class="modal fade show" style="display: block; background: rgba(0, 0, 0, 0.5);" (click)="closeModal()">
   <div class="modal-dialog" (click)="$event.stopPropagation()">
     <div class="modal-content p-4">
       <h4>Comments</h4>
@@ -44,7 +38,8 @@
   </div>
 </div>
 
-<!-- community.component.ts -->
+
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -83,33 +78,4 @@ export class CommunityComponent {
       this.newComment = '';
     }
   }
-}
-
-/* community.component.css */
-.banner {
-  background-color: #03585F;
-  color: white;
-}
-
-.card {
-  border-radius: 10px;
-}
-
-.btn-primary {
-  background-color: #ED9571;
-  border: none;
-}
-
-.btn-outline-primary {
-  color: #03585F;
-  border-color: #03585F;
-}
-
-.btn-success {
-  background-color: #03585F;
-}
-
-.modal-content {
-  border-radius: 10px;
-  width: 100%;
 }
