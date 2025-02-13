@@ -1,7 +1,98 @@
- <div class="col-md-6 mb-3" *ngFor="let post of posts">
-      <div class="card shadow-sm p-3">
-        <h4>{{ post.title }}</h4>
-        <p>{{ post.content }}</p>
-        <button class="btn btn-outline-primary btn-sm" (click)="openCommentsModal(post)">View Comments</button>
+<section class="about-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h2 class="about-title">About Us</h2>
+        <p class="about-subtitle">
+          Cultivating mindfulness and emotional well-being through technology and community.
+        </p>
+        <hr class="divider" />
+        <p class="about-text">
+          At <strong>Mind Mingle</strong>, we believe in the power of self-awareness, balance, and mental well-being. 
+          Our platform provides a space where individuals can explore mindfulness practices, engage in meaningful 
+          discussions, and grow both personally and professionally.
+        </p>
+        <div class="about-list">
+          <h4>Why Choose Us?</h4>
+          <ul class="about-points">
+            <li><strong>Holistic Approach:</strong> Integrating technology with mental well-being.</li>
+            <li><strong>Community-Driven:</strong> A support system for like-minded individuals.</li>
+            <li><strong>Science-Backed Methods:</strong> Techniques grounded in research and psychology.</li>
+            <li><strong>Accessible & Inclusive:</strong> Designed for everyone, everywhere.</li>
+          </ul>
+        </div>
       </div>
     </div>
+  </div>
+</section>
+
+
+.about-section {
+  background-color: #D9E5D9; /* Soft Green */
+  padding: 60px 20px;
+}
+
+.about-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: #03585F; /* Teal */
+  letter-spacing: 1px;
+}
+
+.about-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-style: italic;
+  color: #ED9571; /* Soft Coral */
+  max-width: 70%;
+  margin: 0 auto 15px;
+}
+
+.divider {
+  width: 50px;
+  height: 3px;
+  background-color: #03585F;
+  margin: 15px auto;
+  border: none;
+}
+
+.about-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  color: #202538; /* Charcoal Gray */
+  line-height: 1.6;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.about-list {
+  margin-top: 30px;
+}
+
+.about-list h4 {
+  font-size: 22px;
+  color: #03585F;
+  margin-bottom: 15px;
+}
+
+.about-points {
+  list-style: none;
+  padding: 0;
+  font-size: 18px;
+  color: #202538;
+}
+
+.about-points li {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.about-points li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #03585F;
+  font-weight: bold;
+}
